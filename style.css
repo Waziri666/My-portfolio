@@ -7,7 +7,6 @@ html{
 body{
     margin: 0 auto;
     max-width: 1600px;
-	overflow: scroll;
 }
 a:link, a:visited{color: white; text-decoration: none;}
 #logo {
