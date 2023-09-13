@@ -12,19 +12,27 @@
     <header>
         <div class="top">
             <nav>
-                <h1 id="logo">Wazz</h1>
+                <span id="hamburger" onclick="openMenu()">&#9776;</span>
                 <ul id="menulist">
                     <li><a href="#section_name">ABOUT</a></li>
                     <li><a href="#myskils">MY SKILLS</a></li>
                     <li><a href="#myprojects">PROJECTS</a></li>
                     <li><a href="#Contact_last">CONTACT</a></li>
                 </ul>
-                
+
+                <ul id="responsivelist">
+                    <li id="closemenu" onclick="closeMenu()">&#10006</li>
+                    <li><a href="#section_name" onclick="closeMenu()">ABOUT</a></li>
+                    <li><a href="#myskils" onclick="closeMenu()">MY SKILLS</a></li>
+                    <li><a href="#myprojects" onclick="closeMenu()">PROJECTS</a></li>
+                    <li><a href="#Contact_last" onclick="closeMenu()">CONTACT</a></li>
+                </ul>
             </nav>
+            <h1 id="logo">Wazz</h1>
         </div>
         <div class="brief">
             <h2 class="s">I AM</h2>
-            <h2 id="name"><span>TAUFIC WAZIRI</span></h2>
+            <h2 id="name"><span>TAUFIC WAZIRI..</span></h2>
             <h3>WEB AND APP DEVELOPER</h3>
             <a href="#Contact_last" class="button-contact gradient">Contact</a>
             <a href="#myprojects" class="button-explore"> Explore </a>
@@ -37,7 +45,7 @@
         </div>
         <div class="right">
         <p>I specialize in Mobile Appand Web Development, recognizing its ever-increasing demand. Committed to this journey, I'm eager to explore diverse programming models for optimal app and web development. This aligns with my vision, as I find it instrumental in achieving my goals</p>
-            <a href="#" class="gradient">Read More</a>
+            <div id="ReadMORE"><a href="#" class="gradient">Read More</a></div>
         </div>
         </section>
         <section id="myskils">
@@ -97,7 +105,7 @@
             <div class="container">
                 <main class="row">
                     <section class="col left">
-                        <div class="contactTitle">
+                        <div id="contactTitle">
                             <h2>Get In Touch</h2>
                             <p>If you have a position that aligns with my skills and experience, <br> I'd love to hear from you. <br>Please don't hesitate to get in touch!.</p>
                         </div>
@@ -174,5 +182,13 @@
             </div>
                 
         </div>
+        <script>
+            function openMenu(){
+                document.getElementById("responsivelist").style.width = "200px";
+            }
+            function closeMenu(){
+                document.getElementById("responsivelist").style.width = "0";
+            }
+        </script>
 </body>
 </html>
