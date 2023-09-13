@@ -1,6 +1,9 @@
 *{
     font-family: 'El Messiri', sans-serif;
 }
+html{
+	scroll-behavior: smooth;
+}
 body{
     margin: 0 auto;
     max-width: 1600px;
@@ -17,13 +20,15 @@ a:link, a:visited{color: white; text-decoration: none;}
     background-size: cover;
     background-position: center;
  }
- .top {
-    overflow: hidden;
-    position: relative;
+ #top {
+	display: -webkit-flex;
+	display: -ms-flex;
+    display: flex;
 }
 
 #logo {
     float: left; 
+	margin-top: 8px;
     margin: 10px;
     margin-left: 80px;
 }
@@ -55,10 +60,71 @@ a:link, a:visited{color: white; text-decoration: none;}
     text-decoration: none;
     color: white;
 }
+#hamburger{
+color: white;font-size: 2.5em;
+display: none;margin: 20px;
+float: right;
+cursor: pointer;
+margin-top: 0px;
+}
+#hamburger:hover{
+    transform: translateY(-5px);
+	background-color: seagreen;
+	color: white;
+	box-shadow: 0px 0px 15px cyan;
+    border: 1px solid black;
+	padding: 7px;
+	border-radius: 10px;
+	font-weight: 800;
+}
+#responsivelist {
+	
+	position: absolute;
+    list-style-type: none;
+    padding: 0;
+	margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    background-color: seagreen;
+	transition: width 0.2s;
+	overflow: hidden;
+	width: 0;
+    
+}
+
+ul#responsivelist li{
+	display: block;
+	text-align: center;
+	padding: 10px 0;
+	
+}
+ul#responsivelist li:hover{
+    transform: translateY(-5px);
+	background-color: black;
+	color: white;
+	box-shadow: 0px 0px 15px cyan;
+    border: 1px solid black;
+	padding: 7px;
+	border-radius: 10px;
+	font-weight: 800;
+}
+
+#closemu{
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	color: white;
+	font-size: 3em;
+	text-align: left!important;
+	margin-right: 10px;
+	font-weight: 800;
+}
 nav {
     position: sticky; 
     top: 0; 
-    background-color: white; 
+    background-color: black; 
     z-index: 101;
 }
 .brief{
@@ -77,7 +143,7 @@ nav {
         height: 100%;
         overflow: hidden;
         white-space: nowrap;
-        animation: typing 3s steps(20, end) infinite;
+        animation: typing 4s steps(20, end) infinite;
       }
       
       @keyframes typing {
@@ -144,7 +210,6 @@ nav {
 }
 .left img:hover{
     transform: scale(1.3);
-	transition:.10s ease all;
 }
 .right{
     width: 50vw;
@@ -243,6 +308,8 @@ nav {
 	background-color: #2e2e2e;
 	color: white;
 }
+
+
 .container{
 	width: 100%;
 	min-height: 100vh;
@@ -269,14 +336,14 @@ nav {
 .row section.right{
 	flex-basis: 60%;
 }
-section.left .contactTitle h2{
+section.left #contactTitle h2{
 	position: relative;
 	font-size: 28px;
 	color: #ddd;
 	display: inline-block;
 	margin-bottom: 25px;
 }
-section.left .contactTitle h2::before{
+section.left #contactTitle h2::before{
 	content: '';
 	position: absolute;
 	width: 50%;
@@ -285,7 +352,7 @@ section.left .contactTitle h2::before{
 	top: 120%;
 	left: 0;
 }
-section.left .contactTitle h2::after{
+section.left #contactTitle h2::after{
 	content: '';
 	position: absolute;
 	width: 25%;
@@ -294,7 +361,7 @@ section.left .contactTitle h2::after{
 	top: calc(120% - 1px);
 	left: 0;
 }
-section.left .contactTitle p{
+section.left #contactTitle p{
 	font-size: 17px;
 	color: #ccc;
 	letter-spacing: 1px;
@@ -466,5 +533,33 @@ textarea::-webkit-scrollbar-thumb{
 	}
 }
 
+@media(max-width:844px){
+	body{font-size: 14px;}
+	ul#menulist{display: none;}
+#hamburger{
+	display: block;}
+	.right{width: 65vh;}
+	.right p{line-height: 30px; padding-top: 5px;}
+	#ContactTitle{text-align: center;
+	margin: auto;
+	}
+	
+}
+@media(max-width:777px){
+	#aboutme{
+		-webkit-flex-direction:column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		text-align: center;
+	}
+	.left, .right{
+		margin: auto;
+		width: 90vw;
+	}
+	#ReadMORE{
+		text-align:  center;
+	}
+	a.button-explore{display: none;}
+}
 
 
