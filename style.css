@@ -7,7 +7,7 @@ html{
 body{
     margin: 0 auto;
     max-width: 1600px;
-    overflow: hidden;	
+	overflow: scroll;
 }
 a:link, a:visited{color: white; text-decoration: none;}
 #logo {
@@ -564,6 +564,11 @@ textarea::-webkit-scrollbar-thumb{
 	.brief{
 	  left: 40vw;
 	}
+	#contactTitle
+	{
+		margin-right: 20px;
+	}
   }
+ 
 
 
