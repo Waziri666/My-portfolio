@@ -560,5 +560,10 @@ textarea::-webkit-scrollbar-thumb{
 	}
 	a.button-explore{display: none;}
 }
+@media (max-width: 430px) {
+	.brief{
+	  left: 40vw;
+	}
+  }
 
 
